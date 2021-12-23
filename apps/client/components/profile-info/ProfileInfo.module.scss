@@ -3,7 +3,8 @@
   grid-template-areas:
     'avatar username'
     'avatar action'
-    'info info';
+    'info info'
+    'stories stories';
   grid-template-columns: 1fr 3fr;
   padding: 15px;
 
@@ -69,11 +70,21 @@
 
   .info {
     grid-area: info;
+  }
 
-    .name {
-    }
+  .stories {
+    grid-area: stories;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
 
-    .bio {
+    .story {
+      vertical-align: middle;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid lightgray;
+      padding: 2px;
     }
   }
 }
