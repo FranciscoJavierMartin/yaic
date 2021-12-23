@@ -14,6 +14,15 @@ export default function ProfileInfo() {
         <h2 className={styles.username}>janedoe</h2>
         <button className={`button-link ${styles.action}`}>Follow</button>
       </div>
+      <div className={styles.info}>
+        <h1 className={styles.name}>Jane Doe</h1>
+        <p className={styles.bio}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, alias.
+          Ipsum, alias. Tenetur, animi earum. Amet accusantium odio excepturi at
+          minima ut, architecto, magnam pariatur culpa quaerat harum dolorem
+          recusandae!
+        </p>
+      </div>
     </div>
   );
 }
