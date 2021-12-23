@@ -11,7 +11,8 @@
   @media (min-width: $sm-screen) {
     grid-template-areas:
       'avatar actions'
-      'avatar info';
+      'avatar info'
+      'stories stories';
     grid-template-columns: 1fr 4fr;
     justify-items: start;
     align-items: start;
@@ -70,21 +71,5 @@
 
   .info {
     grid-area: info;
-  }
-
-  .stories {
-    grid-area: stories;
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-
-    .story {
-      vertical-align: middle;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 2px solid lightgray;
-      padding: 2px;
-    }
   }
 }

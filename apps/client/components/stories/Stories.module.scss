@@ -1,0 +1,16 @@
+.stories {
+  grid-area: stories;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  padding-left: 10px;
+
+  .story {
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid lightgray;
+    padding: 2px;
+  }
+}
