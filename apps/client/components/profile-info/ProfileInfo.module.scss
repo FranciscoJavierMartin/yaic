@@ -3,16 +3,16 @@
   grid-template-areas:
     'avatar username'
     'avatar action'
-    'info info'
-    'stories stories';
+    'info info';
   grid-template-columns: 1fr 3fr;
+  // row-gap: 15px;
   padding: 15px;
 
   @media (min-width: $sm-screen) {
     grid-template-areas:
       'avatar actions'
-      'avatar info'
-      'stories stories';
+      'avatar stats'
+      'avatar info';
     grid-template-columns: 1fr 4fr;
     justify-items: start;
     align-items: start;
@@ -41,6 +41,8 @@
       grid-area: actions;
       flex-direction: row;
       justify-content: flex-start;
+      padding-top: 10px;
+      padding-bottom: 15px;
     }
 
     .username {
@@ -69,7 +71,28 @@
     }
   }
 
+  .stats {
+    grid-area: stats;
+    display: none;
+
+    & > * {
+      padding-right: 15px;
+
+      & > * {
+        padding-right: 4px;
+      }
+    }
+
+    @media (min-width: $sm-screen) {
+      display: flex;
+    }
+  }
+
   .info {
     grid-area: info;
+
+    .name {
+      font-size: 16px;
+    }
   }
 }

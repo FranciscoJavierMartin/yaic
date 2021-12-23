@@ -14,8 +14,22 @@ export default function ProfileInfo() {
         <h2 className={styles.username}>janedoe</h2>
         <button className={`button-link ${styles.action}`}>Follow</button>
       </div>
+      <div className={styles.stats}>
+        <div>
+          <strong>81</strong>
+          <span>posts</span>
+        </div>
+        <div>
+          <strong>13k</strong>
+          <span>followers</span>
+        </div>
+        <div>
+          <strong>237</strong>
+          <span>following</span>
+        </div>
+      </div>
       <div className={styles.info}>
-        <h1>Jane Doe</h1>
+        <h1 className={styles.name}>Jane Doe</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, alias.
           Ipsum, alias. Tenetur, animi earum. Amet accusantium odio excepturi at
