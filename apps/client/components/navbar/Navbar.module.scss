@@ -2,14 +2,31 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid lightgray;
-  padding-bottom: 8px;
-  padding-top: 8px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 
   .home {
-    padding-top: 10px;
-    padding-left: 10px;
     font-weight: 500;
     color: black;
+    padding-left: 10px;
+  }
+
+  .search {
+    display: none;
+    @media (min-width: $sm-screen) {
+      display: block;
+      width: 200px;
+      margin: 0 auto;
+
+      @media (min-width: $sm-screen) {
+        width: 500px;
+      }
+
+      input {
+        padding: 5px 8px;
+        width: 100%;
+      }
+    }
   }
 
   .userAccess {

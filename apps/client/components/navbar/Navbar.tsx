@@ -8,6 +8,9 @@ export default function Navbar() {
       <Link href='/'>
         <a className={styles.home}>Yaic</a>
       </Link>
+      <div className={styles.search}>
+        <input type='search' placeholder='Search' />
+      </div>
       <div className={styles.userAccess}>
         <Link href='/signup'>
           <a className={styles.signup}>Sign Up</a>
