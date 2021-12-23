@@ -16,7 +16,7 @@ export default function Navbar() {
           <a className={styles.signup}>Sign Up</a>
         </Link>
         <Link href='/signin'>
-          <a className={styles.signin}>Sign In</a>
+          <a className={`button-link ${styles.signin}`}>Sign In</a>
         </Link>
       </div>
     </div>
