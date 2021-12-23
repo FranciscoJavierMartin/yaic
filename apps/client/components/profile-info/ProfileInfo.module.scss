@@ -8,7 +8,9 @@
   padding: 15px;
 
   @media (min-width: $sm-screen) {
-    grid-template-areas: 'avatar actions';
+    grid-template-areas:
+      'avatar actions'
+      'avatar info';
     grid-template-columns: 1fr 4fr;
     justify-items: start;
     align-items: start;
