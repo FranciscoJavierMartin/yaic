@@ -1,9 +1,10 @@
+import Navbar from '../components/navbar/Navbar';
 import styles from './index.module.scss';
 
 export function Index() {
   return (
     <div className={styles.page}>
-      <h1>Hello World</h1>
+      <Navbar />
     </div>
   );
 }
