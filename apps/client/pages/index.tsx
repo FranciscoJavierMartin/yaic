@@ -1,9 +1,8 @@
-import type { ReactElement } from 'react';
-import MainLayout from '../components/layouts/MainLayout';
 import PostList from '../components/post-list/PostList';
 import ProfileInfo from '../components/profile-info/ProfileInfo';
 import Stats from '../components/stats/Stats';
 import Stories from '../components/stories/Stories';
+import { getMainLayout } from '../utils/layouts';
 import styles from './index.module.scss';
 
 export default function Index() {
@@ -17,6 +16,4 @@ export default function Index() {
   );
 }
 
-Index.getLayout = function getLayout(page: ReactElement) {
-  return <MainLayout>{page}</MainLayout>;
-};
+Index.getLayout = getMainLayout;
