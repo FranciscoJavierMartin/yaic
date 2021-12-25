@@ -1,20 +1,22 @@
-import Navbar from '../components/navbar/Navbar';
+import type { ReactElement } from 'react';
+import MainLayout from '../components/layouts/MainLayout';
 import PostList from '../components/post-list/PostList';
 import ProfileInfo from '../components/profile-info/ProfileInfo';
 import Stats from '../components/stats/Stats';
 import Stories from '../components/stories/Stories';
 import styles from './index.module.scss';
 
-export function Index() {
+export default function Index() {
   return (
-    <div className={styles.page}>
-      <Navbar />
+    <>
       <ProfileInfo />
       <Stories />
       <Stats />
       <PostList />
-    </div>
+    </>
   );
 }
 
-export default Index;
+Index.getLayout = function getLayout(page: ReactElement) {
+  return <MainLayout>{page}</MainLayout>;
+};
