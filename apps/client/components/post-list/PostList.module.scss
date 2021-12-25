@@ -1,0 +1,13 @@
+.postList {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $md-screen) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $lg-screen) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,4 +1,5 @@
 import Navbar from '../components/navbar/Navbar';
+import PostList from '../components/post-list/PostList';
 import ProfileInfo from '../components/profile-info/ProfileInfo';
 import Stats from '../components/stats/Stats';
 import Stories from '../components/stories/Stories';
@@ -11,6 +12,7 @@ export function Index() {
       <ProfileInfo />
       <Stories />
       <Stats />
+      <PostList />
     </div>
   );
 }
