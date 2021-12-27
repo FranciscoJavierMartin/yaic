@@ -1,128 +1,156 @@
 .postDetails {
-  .authorInfo {
-    display: flex;
-    align-items: center;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  max-width: $lg-screen;
 
-    .avatarContainer {
-      grid-area: avatar;
-      padding-right: 10px;
-      padding-left: 5px;
+  @media (min-width: $md-screen) {
+    flex-direction: row;
+  }
 
-      .avatar {
-        vertical-align: middle;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-      }
-    }
-
-    button {
-      background-color: white;
-      border: none;
-      color: $lightblue;
-      font-weight: 400;
+  .image {
+    grid-area: image;
+    span {
+      width: 50% !important;
     }
   }
 
-  .comments {
-    font-size: 1rem;
-    margin: 1.5rem 0;
-    max-width: 650px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    &:first-child {
-      margin-top: 0;
+  .sidebar {
+    @media (min-width: $sm-screen) {
+      border: 1px solid lightgray;
     }
 
-    .comment {
-      position: relative;
-      background: 0 0;
-      margin: 0.5em 0 0;
-      padding: 0.5em 0 0;
-      border: none;
-      line-height: 1.2;
+    .authorInfo {
+      grid-area: author;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid lightgray;
+      padding-top: 5px;
+      padding-bottom: 5px;
 
-      .avatar {
-        display: block;
-        width: 2.5em;
-        height: auto;
-        float: left;
-        margin: 0.2em 0 0;
+      .avatarContainer {
+        grid-area: avatar;
+        padding-right: 10px;
+        padding-left: 5px;
 
-        img {
-          border-style: none;
-          display: block;
-          margin: 0 auto;
-          width: 100%;
-          height: 100%;
+        .avatar {
+          vertical-align: middle;
+          width: 50px;
+          height: 50px;
           border-radius: 50%;
         }
       }
 
-      & > .avatar ~ .content {
-        display: block;
-        margin-left: 3.5em;
+      button {
+        background-color: white;
+        border: none;
+        color: $lightblue;
+        font-weight: 400;
+      }
+    }
+
+    .comments {
+      grid-area: comments;
+      font-size: 1rem;
+      margin: 1.5rem 0;
+      max-width: 650px;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: 400px;
+      overflow: scroll;
+
+      &:first-child {
+        margin-top: 0;
       }
 
-      .content {
-        a.author {
-          cursor: pointer;
-          text-decoration: none;
-          background-color: transparent;
-        }
+      .comment {
+        position: relative;
+        background: 0 0;
+        margin: 0.5em 0 0;
+        padding: 0.5em 0 0;
+        border: none;
+        line-height: 1.2;
 
-        .author {
-          font-size: 1em;
-          color: rgba(0 0 0 / 87%);
-          font-weight: 700;
-        }
+        .avatar {
+          display: block;
+          width: 2.5em;
+          height: auto;
+          float: left;
+          margin: 0.2em 0 0;
 
-        .metadata {
-          display: inline-block;
-          margin-left: 0.5em;
-          color: rgba(0 0 0 / 40%);
-          font-size: 0.875em;
-
-          > &:last-child {
-            margin-right: 0;
-          }
-
-          > * {
-            display: inline-block;
-            margin: 0 0.5em 0 0;
+          img {
+            border-style: none;
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
           }
         }
 
-        .text {
-          margin: 0.25em 0 0.5em;
-          font-size: 1em;
-          word-wrap: break-word;
-          color: rgba(0 0 0 / 87%);
-          line-height: 1.3;
+        & > .avatar ~ .content {
+          display: block;
+          margin-left: 3.5em;
         }
 
-        .actions {
-          font-size: 0.875em;
-
-          button {
-            display: inline-block;
+        .content {
+          a.author {
             cursor: pointer;
-            margin: 0 0.75em 0 0;
-            color: rgba(0 0 0 / 40%);
-            background: transparent;
-            border: none;
+            text-decoration: none;
+            background-color: transparent;
+          }
 
-            &:last-child {
+          .author {
+            font-size: 1em;
+            color: rgba(0 0 0 / 87%);
+            font-weight: 700;
+          }
+
+          .metadata {
+            display: inline-block;
+            margin-left: 0.5em;
+            color: rgba(0 0 0 / 40%);
+            font-size: 0.875em;
+
+            > &:last-child {
               margin-right: 0;
+            }
+
+            > * {
+              display: inline-block;
+              margin: 0 0.5em 0 0;
+            }
+          }
+
+          .text {
+            margin: 0.25em 0 0.5em;
+            font-size: 1em;
+            word-wrap: break-word;
+            color: rgba(0 0 0 / 87%);
+            line-height: 1.3;
+          }
+
+          .actions {
+            font-size: 0.875em;
+
+            button {
+              display: inline-block;
+              cursor: pointer;
+              margin: 0 0.75em 0 0;
+              color: rgba(0 0 0 / 40%);
+              background: transparent;
+              border: none;
+
+              &:last-child {
+                margin-right: 0;
+              }
             }
           }
         }
       }
+    }
+
+    .reply {
+      grid-area: reply;
     }
   }
 }

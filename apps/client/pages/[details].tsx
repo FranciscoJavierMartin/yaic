@@ -1,9 +1,10 @@
 import PostDetails from '../components/post-details/PostDetails';
 import { getMainLayout } from '../utils/layouts';
+import styles from './details.module.scss';
 
 export default function Details() {
   return (
-    <div>
+    <div className={styles.pageDetails}>
       <PostDetails />
     </div>
   );
