@@ -15,8 +15,17 @@
   }
 
   .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
     @media (min-width: $sm-screen) {
       border: 1px solid lightgray;
+    }
+
+    @media (min-width: $md-screen) {
+      max-width: calc($lg-screen / 2);
+      width: 50%;
     }
 
     .authorInfo {
@@ -26,6 +35,7 @@
       border-bottom: 1px solid lightgray;
       padding-top: 5px;
       padding-bottom: 5px;
+      order: 0;
 
       .avatarContainer {
         grid-area: avatar;
@@ -52,11 +62,11 @@
       grid-area: comments;
       font-size: 1rem;
       margin: 1.5rem 0;
-      max-width: 650px;
       padding-left: 10px;
       padding-right: 10px;
       height: 400px;
       overflow: scroll;
+      order: 1;
 
       &:first-child {
         margin-top: 0;
@@ -151,6 +161,11 @@
 
     .reply {
       grid-area: reply;
+      order: 0;
+
+      @media (min-width: $sm-screen) {
+        order: 1;
+      }
     }
   }
 }
