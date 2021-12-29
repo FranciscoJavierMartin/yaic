@@ -4,9 +4,9 @@ import styles from './details.module.scss';
 
 export default function Details() {
   return (
-    <div className={styles.pageDetails}>
+    <main className={styles.pageDetails}>
       <PostDetails />
-    </div>
+    </main>
   );
 }
 
