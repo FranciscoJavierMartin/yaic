@@ -20,8 +20,8 @@ export default function SignIn() {
     <div className={styles.signInPage}>
       <form>
         <h1>Yaic!</h1>
-        <input type='email' placeholder='Email' id='username' />
-        <input type='password' placeholder='Password' id='password' />
+        <input type='email' placeholder='Email' name='email' />
+        <input type='password' placeholder='Password' name='password' />
         <button>Sign In</button>
         <Link href='/signup'>
           <a>Don&apos;t have an account? Create one.</a>
