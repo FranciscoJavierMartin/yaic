@@ -14,7 +14,7 @@ const nextConfig = {
   reactStrictMode: true,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-    prependData: `@import "variables.scss";`,
+    prependData: `@import "index.scss";`,
   },
   images: {
     domains: ['images.unsplash.com'],
