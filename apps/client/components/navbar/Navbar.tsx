@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div className={styles.navbar}>
       <Link href='/'>
-        <a className={styles.home}>Yaic</a>
+        <a className={styles.home}>Yaic!</a>
       </Link>
       <div className={styles.search}>
         <input type='search' placeholder='Search' />

@@ -7,12 +7,12 @@ import styles from './index.module.scss';
 
 export default function Index() {
   return (
-    <>
+    <main className={styles.page}>
       <ProfileInfo />
       <Stories />
       <Stats />
       <PostList />
-    </>
+    </main>
   );
 }
 
