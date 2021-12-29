@@ -24,7 +24,7 @@
     @media (min-width: $sm-screen) {
       border: 1px solid lightgray;
     }
-    
+
     * {
       font-size: 1em;
       letter-spacing: 0.5px;
@@ -35,6 +35,9 @@
     a {
       margin-top: 40px;
       color: $lightblue;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     h1 {
