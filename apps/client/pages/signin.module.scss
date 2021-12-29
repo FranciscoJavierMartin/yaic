@@ -18,6 +18,8 @@
     border-radius: 10px;
     backdrop-filter: blur(10px);
     padding: 50px 35px;
+    display: flex;
+    flex-direction: column;
 
     @media (min-width: $sm-screen) {
       border: 1px solid lightgray;
@@ -31,11 +33,17 @@
     border: none;
   }
 
+  form a {
+    margin-top: 40px;
+    color: $lightblue;
+  }
+
   form h1 {
     font-size: 32px;
     font-weight: 500;
     line-height: 42px;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   input {
