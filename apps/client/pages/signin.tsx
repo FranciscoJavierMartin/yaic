@@ -23,7 +23,9 @@ export default function SignIn() {
         <input type='email' placeholder='Email' id='username' />
         <input type='password' placeholder='Password' id='password' />
         <button>Sign In</button>
-        <Link href='#'>Don&apos;t have an account?</Link>
+        <Link href='/signup'>
+          <a>Don&apos;t have an account? Create one.</a>
+        </Link>
       </form>
     </div>
   );
